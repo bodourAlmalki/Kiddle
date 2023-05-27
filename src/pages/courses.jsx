@@ -8,7 +8,7 @@ export default function Coursespage() {
     <div>
       <Navbar />
       <Courses />
-      {/* <Footer /> */}
+      <Footer/>
     </div>
   );
 }
