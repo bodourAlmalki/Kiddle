@@ -8,7 +8,7 @@ export default function HomePage() {
     <div>
       <Navbar />
       <HomePageComponent />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

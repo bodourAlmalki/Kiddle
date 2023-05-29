@@ -1,9 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import EnrollModal from '../Modal/Modal';
 import Owl from '../owl/Owl';
 import './courses.css';
 
 export default function courses() {
+  const click = () => {
+   
+  };
+
   return (
     <div>
       <section className="hedr">
@@ -58,7 +63,8 @@ export default function courses() {
               programming language.
               <br />
               <br />
-              <button className="btn-yellow">Enroll</button>
+              <EnrollModal />
+             
             </div>
           </section>
 
@@ -70,7 +76,7 @@ export default function courses() {
               paragraphs, images, and more. Get ready to become a web wizard!
               <br />
               <br />
-              <button className="btn-yellow">Enroll</button>
+              <EnrollModal />
             </div>
             <div class="card-border">
               <div class="card-bg">
@@ -130,7 +136,7 @@ export default function courses() {
                 family.
                 <br />
                 <br />
-                <button className="btn-yellow">Enroll</button>
+                <EnrollModal />
               </div>
             </section>
 
@@ -142,7 +148,7 @@ export default function courses() {
                 games, and make your websites come alive.
                 <br />
                 <br />
-                <button className="btn-yellow">Enroll</button>
+                <EnrollModal />
               </div>
               <div class="card-border">
                 <div class="card-bg">
@@ -174,66 +180,9 @@ export default function courses() {
             </section>
           </div>
         </div>
+     
+
       </Container>
     </div>
   );
 }
-
-// import React, { useState } from 'react';
-// import { Container } from 'react-bootstrap';
-// import { useNavigate } from 'react-router-dom';
-// import './courses.css';
-
-// export default function Courses() {
-//   const navigate = useNavigate();
-//   const [activeLevel, setActiveLevel] = useState(0);
-
-//   const handleNextLevel = () => {
-//     if (activeLevel < 3) {
-//       setActiveLevel(prevLevel => prevLevel + 1);
-//     }
-//   };
-
-//   const handleCourseClick = () => {
-//     if (activeLevel < 3) {
-//       navigate(`/course/${activeLevel + 1}`);
-//     } else {
-//       // You have completed all the courses
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <Container>
-//         <div className="wrapper">
-//         <div
-//           className={`levels ${activeLevel === 0 ? 'active' : ''}`}
-//           onClick={handleCourseClick}
-//         >
-//           <h1>Scratch</h1>
-//         </div>
-//         <div
-//           className={`levels ${activeLevel === 1 ? 'active' : ''}`}
-
-//           onClick={handleCourseClick}
-//         >
-//           <h1>HTML</h1>
-//         </div>
-//         <div
-//           className={`levels ${activeLevel === 2 ? 'active' : ''}`}
-//           onClick={handleCourseClick}
-//         >
-//           <h1>CSS</h1>
-//         </div>
-//         <div
-//           className={`levels ${activeLevel === 3 ? 'active' : ''}`}
-//           onClick={handleCourseClick}
-//         >
-//           <h1>JavaScript</h1>
-//         </div>
-//         <button onClick={handleNextLevel}>Next Level</button>
-//         </div>
-//       </Container>
-//     </div>
-//   );
-// }

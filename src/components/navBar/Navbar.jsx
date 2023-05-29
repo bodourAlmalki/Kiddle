@@ -37,8 +37,8 @@ function Navbar() {
         <button className="btn-R">Register</button>
         <button className="btn-R">Log In</button>
         <div className="div-coin">
-          <div className="coins">
-            {/* <FontAwesomeIcon
+          <div className="coins-1">
+            <FontAwesomeIcon
               icon={faCircleDollarToSlot}
               flip
               size="sm"
@@ -47,7 +47,7 @@ function Navbar() {
                 '--fa-primary-color': '#ffb411',
                 '--fa-secondary-color': '#eee720',
               }}
-            /> */}
+            />
           </div>
 
           <div className="coin-counter">

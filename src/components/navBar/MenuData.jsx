@@ -19,7 +19,7 @@ export const MenuData = [
   },
   {
     title: 'Services',
-    url: '#',
+    url: '/Coursespage',
     cName: 'nav-links',
     icon: 'fa-solid fa-briefcase',
   },

@@ -3,11 +3,12 @@ import './HomePage.css';
 import firstImage from '../../Assets/first-image.png';
 import secondImage from '../../Assets/second-image.png';
 
-
 import { motion } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import CardCourse from '../card/card';
+import { Link } from 'react-router-dom';
+import Cube from '../Cube/Cube';
 
 export default function HomePageComponent() {
   return (
@@ -18,7 +19,10 @@ export default function HomePageComponent() {
             Learn Programming <br />
             in a Fun Way!
           </p>
-          <button className="btn-blue">Get Started</button>
+
+          <Link to="/courses">
+            <button className="btn-blue">Get Started</button>
+          </Link>
         </div>
         <motion.div
           className="img_div"
@@ -70,49 +74,11 @@ export default function HomePageComponent() {
       <section className="four">
         <h2 className="four_h2">Explore Our Courses:</h2>
         <CardCourse />
-        <button className="btn-blue-2">Learn More</button>
+        <Link to="/courses">
+          <button className="btn-blue-2">Learn More</button>
+        </Link>
       </section>
-
-      <div class="cube_wrapper">
-        <div class="cube">
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/css.png?raw=true"
-              alt="CSS"
-            />
-          </div>
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/html.png?raw=true"
-              alt="HTML"
-            />
-          </div>
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/js.png?raw=true"
-              alt="JS"
-            />
-          </div>
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/css.png?raw=true"
-              alt="CSS"
-            />
-          </div>
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/html.png?raw=true"
-              alt="HTML"
-            />
-          </div>
-          <div class="cube_face">
-            <img
-              src="https://github.com/jakehong0521/jakehong0521.github.io/blob/master/src/static/cube/js.png?raw=true"
-              alt="JS"
-            />
-          </div>
-        </div>
-      </div>
+      <Cube />
     </Container>
   );
 }

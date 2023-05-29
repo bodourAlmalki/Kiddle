@@ -11,6 +11,7 @@ export default function Footer() {
           className="footer-component"
           d="M0,32L80,48C160,64,320,96,480,90.7C640,85,800,43,960,58.7C1120,75,1280,149,1360,186.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
         ></path>
+        vbkmnbvcxcvbnm,.,mnbvcxzxcvb
       </svg>
       
     </div>
