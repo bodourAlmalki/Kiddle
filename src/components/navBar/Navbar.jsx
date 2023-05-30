@@ -8,15 +8,10 @@ import CoinCounter from '../CoinCounter/CoinCounter';
 
 function Navbar() {
   return (
-    <header className="container-header">
+    <header className="container-header-1">
       <nav className="NavbarItems">
         <div className="whole-logo">
-          <img
-            src={logo}
-            alt=" this is the logo"
-            loading="eager"
-            className="kiddle-logo"
-          ></img>
+          <img src={logo} alt=" this is the logo" className="kiddle-logo"></img>
         </div>
         <ul className="nav-menu">
           {MenuData.map((item, index) => {
@@ -36,23 +31,15 @@ function Navbar() {
       <div className="btn-all">
         <button className="btn-R">Register</button>
         <button className="btn-R">Log In</button>
-        <div className="div-coin">
-          <div className="coins-1">
-            <FontAwesomeIcon
-              icon={faCircleDollarToSlot}
-              flip
-              size="sm"
-              className="icon"
-              style={{
-                '--fa-primary-color': '#ffb411',
-                '--fa-secondary-color': '#eee720',
-              }}
-            />
-          </div>
+        <div className="div-coin-1">
+          <FontAwesomeIcon
+            icon={faCircleDollarToSlot}
+            flip
+            size="sm"
+            className="icon-flip"
+          />
 
-          <div className="coin-counter">
-            <CoinCounter />
-          </div>
+          <CoinCounter />
         </div>
       </div>
     </header>

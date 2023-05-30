@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Modal.css';
 
 Modal.setAppElement('#root');
 
-const EnrollModal = () => {
+const EnrollModal = ({lesson}) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-
   const openModal = () => {
     setIsOpen(true);
   };
@@ -18,8 +17,15 @@ const EnrollModal = () => {
   };
 
   const handleEnrollHtml = () => {
-    // Perform enroll logic here
-    navigate('/lessons');
+    if(lesson === 'html'){
+      navigate('/LessonsHtml_1');
+    } else if(lesson === 'js'){
+      navigate('/LessonsJavaScript_1');
+    }else if(lesson === 'css'){
+      navigate('/LessonsCss_1');
+    }else if(lesson === 'scratch'){
+      navigate('/LessonsScratch_1');
+    }
     console.log('Enrolling in the course...');
     closeModal();
   };
@@ -39,6 +45,7 @@ const EnrollModal = () => {
           <p>Are you sure you want to enroll in this course?</p>
           <div>
             <button onClick={handleEnrollHtml}>Yes, enroll</button>
+
             <button onClick={closeModal}>No</button>
           </div>
         </div>

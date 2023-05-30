@@ -1,5 +1,5 @@
 import React from 'react';
-import Lessons_Html_3 from '../../components/Lessons/Lessons_Html_1';
+import Lessons_Html_3 from '../../components/Lessons/Lessons_Html_3';
 
 function LessonsHtml_3() {
   return (

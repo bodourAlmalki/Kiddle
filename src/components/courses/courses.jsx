@@ -5,10 +5,7 @@ import Owl from '../owl/Owl';
 import './courses.css';
 
 export default function courses() {
-  const click = () => {
-   
-  };
-
+  
   return (
     <div>
       <section className="hedr">
@@ -63,8 +60,7 @@ export default function courses() {
               programming language.
               <br />
               <br />
-              <EnrollModal />
-             
+              <EnrollModal lesson="scratch" />
             </div>
           </section>
 
@@ -76,7 +72,7 @@ export default function courses() {
               paragraphs, images, and more. Get ready to become a web wizard!
               <br />
               <br />
-              <EnrollModal />
+              <EnrollModal lesson="html" />
             </div>
             <div class="card-border">
               <div class="card-bg">
@@ -136,7 +132,7 @@ export default function courses() {
                 family.
                 <br />
                 <br />
-                <EnrollModal />
+                <EnrollModal lesson="css" />
               </div>
             </section>
 
@@ -148,7 +144,7 @@ export default function courses() {
                 games, and make your websites come alive.
                 <br />
                 <br />
-                <EnrollModal />
+                <EnrollModal lesson="js" />
               </div>
               <div class="card-border">
                 <div class="card-bg">
@@ -180,8 +176,6 @@ export default function courses() {
             </section>
           </div>
         </div>
-     
-
       </Container>
     </div>
   );

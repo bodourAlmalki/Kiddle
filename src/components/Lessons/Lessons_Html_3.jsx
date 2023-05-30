@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Lessons.scss';
+import IconBacktoHome from '../iconBacktoHome/iconBacktoHome';
 
 const Lessons_Html_3 = () => {
   return (
@@ -20,12 +21,14 @@ const Lessons_Html_3 = () => {
             allowFullScreen
           ></iframe>
           <div className="buttons">
-            <a>
+          <Link to="/LessonsHtml_2">
+
               <button className="btn-moove-1">previous</button>
-            </a>
-            <Link to="/Quiz">
+         </Link>
+            <Link to="/QuizHtml_3">
               <button className="btn-moove">Next</button>
             </Link>
+            <IconBacktoHome/>
           </div>
         </div>
       </section>

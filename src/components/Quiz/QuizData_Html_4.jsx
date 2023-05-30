@@ -1,52 +1,26 @@
 export const QuizData_Html_4 = {
   questions: [
     {
-      question:
-        'Which of the following is used in React.js to increase performance?',
-      choices: [
-        'Virtual DOM',
-        'Original DOM',
-        'Both A and B',
-        'None of the above',
-      ],
+      question: 'Which HTML tag is used to underline text?',
+      choices: ['<u>', '<b>', '<i>', '<br>'],
       type: 'MCQs',
-      correctAnswer: 'Virtual DOM',
+      correctAnswer: '<u>',
     },
     {
-      question: 'What is ReactJS?',
-      choices: [
-        'Server-side framework',
-        'User Interface framework',
-        'both a and b',
-        'None of the above',
-      ],
+      question: 'Which HTML tag is used to make text bold?',
+      choices: ['<u>', '<b>', '<i>', '<br>'],
+
       type: 'MCQs',
-      correctAnswer: 'User Interface framework',
+      correctAnswer: '<b>',
     },
     {
       question:
-        'Identify the one which is used to pass data to components from outside',
-      choices: ['Render with arguments', 'setState', 'PropTypes', 'props'],
+      "Which HTML tag is used to make text italic?",
+      choices: ['<u>', '<b>', '<i>', '<br>'],
       type: 'MCQs',
-      correctAnswer: 'props',
-    },
-    {
-      question: 'In which language is React.js written?',
-      choices: ['Python', 'Java', 'C#', 'JavaScript'],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript',
-    },
-    {
-      question: 'What is Babel?',
-      choices: [
-        'JavaScript interpreter',
-        'JavaScript transpiler',
-        'JavaScript compiler',
-        'None of the above',
-      ],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript compiler',
-    },
+      correctAnswer: '<i>',
+    }
+  
   ],
 };
 

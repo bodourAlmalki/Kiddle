@@ -1,52 +1,25 @@
 export const QuizData_Html_2 = {
   questions: [
     {
-      question:
-        'Which of the following is used in React.js to increase performance?',
-      choices: [
-        'Virtual DOM',
-        'Original DOM',
-        'Both A and B',
-        'None of the above',
-      ],
+      question: 'What HTML element is used to give a name to a webpage?',
+      choices: [' <header>', ' <body>', '<title>', ' <h1>'],
       type: 'MCQs',
-      correctAnswer: 'Virtual DOM',
-    },
-    {
-      question: 'What is ReactJS?',
-      choices: [
-        'Server-side framework',
-        'User Interface framework',
-        'both a and b',
-        'None of the above',
-      ],
-      type: 'MCQs',
-      correctAnswer: 'User Interface framework',
+      correctAnswer: ' <title>',
     },
     {
       question:
-        'Identify the one which is used to pass data to components from outside',
-      choices: ['Render with arguments', 'setState', 'PropTypes', 'props'],
+        'Which HTML element is used to hold the main content that you see on a webpage?',
+      choices: ['<header>', ' <body>', '<title>', '<h1>'],
       type: 'MCQs',
-      correctAnswer: 'props',
+      correctAnswer: '<body>',
     },
     {
-      question: 'In which language is React.js written?',
-      choices: ['Python', 'Java', 'C#', 'JavaScript'],
+      question:
+        'What HTML element is used for the top section of a webpage, which usually has the logo and navigation?',
+      choices: ['<header>', ' <body>', '<title>', '<h1>'],
       type: 'MCQs',
-      correctAnswer: 'JavaScript',
-    },
-    {
-      question: 'What is Babel?',
-      choices: [
-        'JavaScript interpreter',
-        'JavaScript transpiler',
-        'JavaScript compiler',
-        'None of the above',
-      ],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript compiler',
-    },
+      correctAnswer: ' <header>',
+    }
   ],
 };
 

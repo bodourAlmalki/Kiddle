@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { resultInitalState } from './QuizData_Html_1.jsx';
+import { Link, useNavigate } from 'react-router-dom';
+
 import './Quiz.scss';
 import AnswerTimer from '../AnswerTimer/AnswerTimer.jsx';
 
@@ -10,9 +12,12 @@ const Quiz = ({ questions }) => {
   const [result, setResult] = useState(resultInitalState);
   const [showResult, setShowResult] = useState(false);
   const [showAnswerTimer, setShowAnswerTimer] = useState(true);
-
+  const navigate = useNavigate();
+  const path = window.location.pathname;
+  const lessonPath = path.substring(0, path.indexOf('_'));
+  const lessonNumber = path.split('_')[1];
+  console.log(lessonPath, 'dsdds');
   const { question, choices, correctAnswer } = questions[currentQuestion];
-
   const onAnwswerClick = (answer, index) => {
     setAnswerIdx(index);
     if (answer === correctAnswer) {
@@ -21,7 +26,19 @@ const Quiz = ({ questions }) => {
       setAnswer(false);
     }
   };
+  const onContinue = () => {
+    if (lessonPath === '/QuizHtml') {
+      navigate(`/LessonsHtml_${parseInt(lessonNumber) + 1}`);
+    } else if (lessonPath === '/QuizJs') {
+      navigate(`/LessonsJavaScript_${parseInt(lessonNumber) + 1}`);
+    } else if (lessonPath === '/QuizCss') {
+      navigate(`/LessonsCss_${parseInt(lessonNumber) + 1}`);
+    } else if (lessonPath === '/QuizScratch') {
+      navigate(`/LessonsScratch_${parseInt(lessonNumber) + 1}`);
+    }
 
+    console.log('Continue to next Lesson...');
+  };
   const onClickNext = (finalAnswer) => {
     setAnswerIdx(null);
     setShowAnswerTimer(false);
@@ -105,7 +122,8 @@ const Quiz = ({ questions }) => {
             <p className="p">
               Wrong Answers: <span>{result.wrongAnswers}</span>
             </p>
-            <button onClick={onTryAgain}>Try again</button>
+            <button onClick={onTryAgain}>Try again</button>{' '}
+            <button onClick={onContinue}>Continue</button>
           </div>
         )}
       </div>

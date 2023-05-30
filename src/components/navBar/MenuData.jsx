@@ -1,19 +1,19 @@
 export const MenuData = [
   {
     title: 'Home',
-    url: '#',
+    url: '/',
     cName: 'nav-links',
     icon: 'fa-solid fa-house-user',
   },
   {
     title: 'contact',
-    url: '#',
+    url: '/Contact',
     cName: 'nav-links',
     icon: 'fa-solid fa-address-book',
   },
   {
     title: 'why Kiddle',
-    url: '#',
+    url: '/AboutPage',
     cName: 'nav-links',
     icon: 'fa-solid fa-circle-info',
   },

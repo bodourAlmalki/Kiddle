@@ -1,52 +1,25 @@
-export const QuizData_Html_3= {
+export const QuizData_Html_3 = {
   questions: [
     {
-      question:
-        'Which of the following is used in React.js to increase performance?',
-      choices: [
-        'Virtual DOM',
-        'Original DOM',
-        'Both A and B',
-        'None of the above',
-      ],
+      question: 'Which HTML tag is used to create the biggest heading?',
+
+      choices: ['<h1>', '<h2>', '<h3>', '<h4>'],
       type: 'MCQs',
-      correctAnswer: 'Virtual DOM',
+      correctAnswer: '<h1>',
     },
     {
-      question: 'What is ReactJS?',
-      choices: [
-        'Server-side framework',
-        'User Interface framework',
-        'both a and b',
-        'None of the above',
-      ],
+      question: 'Which HTML tag is used to create a paragraph of text?',
+      choices: ['<h1>', '<h2>', '<p>', '<br>'],
       type: 'MCQs',
-      correctAnswer: 'User Interface framework',
+      correctAnswer: '<p>',
     },
     {
       question:
-        'Identify the one which is used to pass data to components from outside',
-      choices: ['Render with arguments', 'setState', 'PropTypes', 'props'],
+        ' Which HTML tag is used to insert a line break within a paragraph?',
+      choices: ['<h1>', '<h2>', '<p>', '<br>'],
       type: 'MCQs',
-      correctAnswer: 'props',
-    },
-    {
-      question: 'In which language is React.js written?',
-      choices: ['Python', 'Java', 'C#', 'JavaScript'],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript',
-    },
-    {
-      question: 'What is Babel?',
-      choices: [
-        'JavaScript interpreter',
-        'JavaScript transpiler',
-        'JavaScript compiler',
-        'None of the above',
-      ],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript compiler',
-    },
+      correctAnswer: '<br>',
+    }
   ],
 };
 

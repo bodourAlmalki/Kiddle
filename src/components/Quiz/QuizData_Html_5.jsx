@@ -1,51 +1,29 @@
 export const QuizData_Html_5 = {
   questions: [
     {
-      question:
-        'Which of the following is used in React.js to increase performance?',
-      choices: [
-        'Virtual DOM',
-        'Original DOM',
-        'Both A and B',
-        'None of the above',
-      ],
+      question: 'Which HTML tag is used to make text hyperlink?',
+      choices: ['<u>', '<b>', '<a>', '<br>'],
+
       type: 'MCQs',
-      correctAnswer: 'Virtual DOM',
+      correctAnswer: '<a>',
     },
     {
-      question: 'What is ReactJS?',
-      choices: [
-        'Server-side framework',
-        'User Interface framework',
-        'both a and b',
-        'None of the above',
-      ],
+      question: 'Which HTML element is used to define the image in a webpage',
+      choices: ['<image>', '<imeg>', '<img>', '<br>'],
       type: 'MCQs',
-      correctAnswer: 'User Interface framework',
+      correctAnswer: '<img>',
     },
     {
-      question:
-        'Identify the one which is used to pass data to components from outside',
-      choices: ['Render with arguments', 'setState', 'PropTypes', 'props'],
+      question: 'Which attribute is used to be  after <a>?',
+      choices: ['href', 'src', '<i>', 'rcs'],
       type: 'MCQs',
-      correctAnswer: 'props',
+      correctAnswer: 'href',
     },
     {
-      question: 'In which language is React.js written?',
-      choices: ['Python', 'Java', 'C#', 'JavaScript'],
+      question: 'Which attribute is used to be  after <img>?',
+      choices: ['href', 'src', '<i>', 'rcs'],
       type: 'MCQs',
-      correctAnswer: 'JavaScript',
-    },
-    {
-      question: 'What is Babel?',
-      choices: [
-        'JavaScript interpreter',
-        'JavaScript transpiler',
-        'JavaScript compiler',
-        'None of the above',
-      ],
-      type: 'MCQs',
-      correctAnswer: 'JavaScript compiler',
+      correctAnswer: 'src',
     },
   ],
 };

@@ -18,7 +18,7 @@
   padding: 30px 60px;
   box-sizing: border-box;
   position: relative;
-  height: 50vh;
+  height: 60vh;
 
   .active-question-no {
     font-size: 32px;
@@ -87,6 +87,7 @@
 
   .result {
     text-align: center;
+    margin-top: 5rem;
     font-weight: 700;
 
     .h3 {
