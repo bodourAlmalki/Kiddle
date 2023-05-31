@@ -7,9 +7,10 @@ body {
 .one {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 40vh;
+  width: 100%;
   margin-top: 20vh;
   background-color: #fff;
   scroll-snap-align: start;
@@ -17,7 +18,7 @@ body {
 .two {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 40vh;
   margin-top: 8vh;
@@ -144,15 +145,87 @@ body {
   transition: all 0.3s;
 }
 /* -------------Images-------------------- */
-.imeg-1 {
-  margin-left: 20vw;
+.imeg-1,
+.imeg-2 {
+  margin-bottom: 2rem;
 }
+
 .img_div {
   position: relative;
 }
 .img_div:hover {
   flex-basis: 35%;
 }
-.imeg-2 {
-  margin-right: 10vw;
+
+/* Responsive CSS */
+
+/* Mobile */
+@media (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .two,
+  .four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .Wrapper-iframe {
+    margin: 0;
+
+  }
+  .one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+  }
+
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .imeg-1,
+  .imeg-2 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 3rem;
+  }
 }

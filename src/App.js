@@ -43,6 +43,8 @@ import QuizCss_2 from './pages/Quiz-page/QuizCss-2.jsx';
 import QuizCss_3 from './pages/Quiz-page/QuizCss-3.jsx';
 import QuizCss_4 from './pages/Quiz-page/QuizCss-4.jsx';
 import QuizCss_5 from './pages/Quiz-page/QuizCss-5.jsx';
+import Signup from './components/signup/Signup.jsx';
+import Login from './components/login/Login.jsx';
 
 export default function App() {
   return (
@@ -51,6 +53,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<Coursespage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
           {/* lesson html */}
           <Route path="/LessonsHtml_1" element={<LessonsHtml_1 />} />
           <Route path="/LessonsHtml_2" element={<LessonsHtml_2 />} />

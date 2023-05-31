@@ -1,32 +1,44 @@
-import React, { useState } from "react";
-import "./signup.css";
-import axios from "axios";
+import React, { useState } from 'react';
+import './signup.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useJwt } from 'react-jwt';
 
-function Signup({ hello }) {
-  const [email, setEmail] = useState("");
-  const [Name, setName] = useState("");
-  const [password, setPassword] = useState("");
+function Signup({ hello, handleButtonClick }) {
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [password, setPassword] = useState('');
   const [showPopUp, setShowPopUp] = useState(true);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/user/", {
-        name: Name,
-        email: email,
-        password: password,
+      console.log(firstName + lastName + email + password);
+      const response = await axios.post(
+        'https://final-project-idzh.onrender.com/user',
+        {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
+        }
+      );
+      console.log(response.data);
+      toast.success(' Account created succesfully!', {
+        position: toast.POSITION.TOP_RIGHT,
       });
-      console.log(response.data); 
-      hello()
-
+      hello();
     } catch (error) {
       console.error(error);
+      toast.error('Error!', {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
   };
-
-  function handleButtonClick() {
-    setShowPopUp(!showPopUp);
-  }
 
   return (
     <>
@@ -35,9 +47,17 @@ function Signup({ hello }) {
         <input
           type="text"
           name="Name"
-          value={Name}
-          placeholder="Your name"
-          onChange={(e) => setName(e.target.value)}
+          value={firstName}
+          placeholder="Your first name"
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+
+        <input
+          type="text"
+          name="Name"
+          value={lastName}
+          placeholder="Your last name"
+          onChange={(e) => setLastName(e.target.value)}
         />
         <input
           type="text"
@@ -59,9 +79,13 @@ function Signup({ hello }) {
         <p className="p">
           <p onClick={hello}>Return to login?</p>
           <span>
-            <a href="#" onClick={handleButtonClick}>
+            <p
+              onClick={() => {
+                navigate(-1);
+              }}
+            >
               cancel
-            </a>
+            </p>
           </span>
         </p>
       </form>
